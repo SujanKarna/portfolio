@@ -1,0 +1,75 @@
+body {
+  background-color: #e6f7e6;
+}
+.navbar {
+  background-color: #fff;
+  height: 80px;
+  margin: 20px;
+  border-radius: 16px;
+  padding: 0.5rem;
+}
+.navbar-brand {
+  font-weight: 500;
+  color: #009970;
+  font-size: 30px;
+  transition: 0.3s color;
+}
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #009970;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url("pexels-goumbik-669619.jpg");
+  background-size: cover;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Adjust the color and opacity as needed */
+  z-index: 1;
+}
+.container {
+  padding-top: 40vh;
+  position: relative;
+  z-index: 2;
+  color: white; /* Ensure text is visible over the background */
+}
+.dynamic-text {
+  color: #009970;
+  text-transform: uppercase;
+}
