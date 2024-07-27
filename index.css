@@ -63,7 +63,7 @@ body {
   ); /* Adjust the color and opacity as needed */
   z-index: 1;
 }
-.container {
+.hero-container {
   padding-top: 40vh;
   position: relative;
   z-index: 2;
@@ -72,4 +72,7 @@ body {
 .dynamic-text {
   color: #009970;
   text-transform: uppercase;
+}
+.about-row {
+  padding-top: 20vh;
 }
