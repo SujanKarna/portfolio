@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="programmer.png" type="image/icon type" />
+    <link rel="icon" href="Assets/Images/icon.png" type="image/icon type" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,7 +16,6 @@
     />
     <link rel="stylesheet" type="text/css" href="index.css" />
     <title>Sujan Karna</title>
-    <style></style>
   </head>
   <body>
     <!-- Header -->
@@ -91,15 +90,24 @@
     <!-- End Header -->
     <!-- Hero Section -->
     <section class="hero-section">
-      <div class="container hero-container text-center">
+      <div class="container-fluid hero-container text-center">
         <div class="row">
-          <h1 class="hero-title">
-            &lt;I am a<br />
-            <span class="dynamic-text" id="dynamic-text">Web Developer</span>
-          </h1>
-          <p class="hero-subtitle">
-            Crafting elegant websites and unraveling data mysteries
-          </p>
+          <div class="col">
+            <div class="hero-content">
+              <h1 class="hero-title">
+                &lt;I'm<br />
+                <span class="dynamic-text" id="dynamic-text"
+                  >Web Developer</span
+                >
+              </h1>
+              <p>
+                <i>Crafting elegant websites and unraveling data mysteries</i>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <img class="hero-image" src="Assets/Images/hero.gif" />
+          </div>
         </div>
       </div>
     </section>
@@ -109,17 +117,17 @@
       <section id="about">
         <div class="container about-container mb-4 mt-0 text-center">
           <div class="row mt-4">
-            <h1>About Me</h1>
+            <h1><u>About Me</u></h1>
             <div class="col">
               <img src="aboutMe.png" alt="AboutMe" />
             </div>
             <div class="col">
               <div class="row about-row text-center">
-                <div class="col">
+                <div class="col mb-4">
                   <div class="card about-card" style="width: 18rem">
                     <div class="card-body">
                       <h5 class="card-title">
-                        <i class="bi bi-award-fill"><br />Education</i>
+                        <i class="bi bi-people-fill"><br />Education</i>
                       </h5>
                       <p class="card-text">
                         B.Sc.Computer Science and Information Technology
@@ -146,7 +154,15 @@
         </div>
       </section>
       <!-- End About Section -->
-      <section id="certificate"></section>
+      <!-- Certificate Section -->
+      <section id="certificate">
+        <div class="container certificate-container text-center">
+          <div class="row">
+            <h1><u>Certificates</u></h1>
+          </div>
+        </div>
+      </section>
+      <!-- End Certificate Section -->
     </main>
     <footer></footer>
     <script>
