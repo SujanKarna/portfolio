@@ -47,13 +47,14 @@ h1:hover,
 }
 .hero-container {
   background-color: #fff;
-}
-.hero-content {
-  padding-top: 40vh;
-}
-.hero-image {
   padding-top: 20vh;
 }
 .dynamic-text {
   color: #009970;
+}
+.about-img {
+  height: 50%;
+}
+a {
+  text-decoration: none;
 }
