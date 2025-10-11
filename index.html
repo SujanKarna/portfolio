@@ -1,1055 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-VZTK8K7N6H"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-VZTK8K7N6H");
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="Assets/Images/icon.png" type="image/icon type" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="index.css" />
-    <title>Sujan Karna</title>
-  </head>
-  <body>
-    <!-- Header -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Assets/images/icon.png" type="icon type" />
+    <title>Sujan Karna Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons (optional but good for social links) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
     <header>
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><b>Sujan Karna</b></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                Sujan Karna
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
+        <nav class="container">
+            <div class="logo"><a href="#">Sujan Karna</a></div>
+            <ul class="nav-links">
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#youtube">YouTube</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <span>Light Mode</span>
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a
-                    class="nav-link mx-lg-2 active"
-                    aria-current="page"
-                    href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#certificate"
-                    >Certificates</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#">Blogs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#">Videos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
+        </nav>
     </header>
-    <!-- End Header -->
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div
-        class="container-fluid hero-container text-center align-items-center"
-      >
-        <div class="row hero-row align-items-center">
-          <div class="col-md-6 text-center">
-            <div class="hero-content">
-              <h1 class="hero-title">
-                &lt;I'm<br />
-                <span class="dynamic-text" id="dynamic-text"
-                  >Web Developer</span
-                >
-              </h1>
-              <p>
-                <i>Crafting elegant websites and unraveling data mysteries</i>
-              </p>
-              <a
-                href="https://www.facebook.com/sujan.karna.52"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="Assets/Social logos/facebook-48.png"
-                  class="card-img-top"
-                  style="
-                    width: 40px;
-                    height: auto;
-                    align-self: center;
-                    padding-top: 15px;
-                  "
-                  alt="facebook-logo"
-                />
-              </a>
-              <a
-                href="https://www.youtube.com/@AlxiCoders"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="Assets/Social logos/youtube-48.png"
-                  class="card-img-top"
-                  style="
-                    width: 40px;
-                    height: auto;
-                    align-self: center;
-                    padding-top: 15px;
-                  "
-                  alt="youtube-logo"
-                />
-              </a>
-              <a
-                href="https://medium.com/@karna.sujan52"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="Assets/Social logos/medium-64.png"
-                  class="card-img-top"
-                  style="
-                    width: 40px;
-                    height: auto;
-                    align-self: center;
-                    padding-top: 15px;
-                  "
-                  alt="medium-logo"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/sujan-karna-054a5225a/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="Assets/Social logos/linked-in-48.png"
-                  class="card-img-top"
-                  style="
-                    width: 40px;
-                    height: auto;
-                    align-self: center;
-                    padding-top: 15px;
-                  "
-                  alt="linkedin-logo"
-                />
-              </a>
-              <a
-                href="https://www.kaggle.com/sujankarna"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="Assets/Social logos/kaggle.png"
-                  class="card-img-top"
-                  style="
-                    width: 30px;
-                    height: auto;
-                    align-self: center;
-                    padding-top: 15px;
-                  "
-                  alt="kaggle-logo"
-                />
-              </a>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm Sujan Karna</h1>
+                    <p class="animated-text"></p> <!-- For placeholder animation -->
+                    <p>A CSIT passout passionate about Artificial Intelligence and Machine Learning.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/sujan-karna-054a5225a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/SujanKarna" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://medium.com/@karna.sujan52" target="_blank"><i class="fab fa-medium"></i></a>
+                        <a href="https://www.youtube.com/@AlxiCoders" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Personal photo -->
+                    <img src="Assets/images/sujan.jpg" alt="Profile Picture">
+                </div>
             </div>
-          </div>
-          <div class="col-md-6 img-container text-center">
-            <img
-              class="hero-image img-fluid"
-              src="Assets/Images/hero.gif"
-              alt="Hero"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Hero -->
-    <main id="main">
-      <!-- About Section -->
-      <section id="about">
-        <div class="container about-container mt-5 text-center">
-          <h1 class="pt-4">About Me</h1>
-          <div class="row mt-5 align-items-center">
-            <div class="col-md-4">
-              <img
-                class="about-img img-fluid"
-                src="Assets/Images/about.gif"
-                style="height: 300px"
-                alt="AboutMe"
-              />
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Bachelor of Science in Computer Science & Information Technology - Mahendra Morang Adarsh Multiple Campus, Tribhuvan University, Nepal</h3>
+                    <p class="duration">2019 - 2023 (A.D)</p>
+                    <ul>
+                        <li>Graduated with 76.67%</li>
+                        <li>Relevant coursework: Data Structures, Algorithms, Database Management, Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision</li>
+                        <li>Final Year Project: [Online Assessment with Student Performance Prediction System]</li>
+                    </ul>
+                </div>
+                <!-- Add when I join my masters -->
             </div>
-            <div class="col-md-8">
-              <div class="row row-cols-1 row-cols-md-2 g-4 pb-4">
-                <div class="col">
-                  <div class="card h-100">
-                    <img
-                      src="Assets/Images/education.png"
-                      class="card-img-top"
-                      style="
-                        width: 50px;
-                        height: auto;
-                        align-self: center;
-                        padding-top: 15px;
-                      "
-                      alt="education"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Education</h5>
-                      <p class="card-text">
-                        B.Sc Computer Science and Information Technology
-                      </p>
-                    </div>
-                  </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <h3>AI/ML Trainer - <a class="experience_link" href="https://numadigitalfarm.com.np/" target="_blank">Numa Digital Farm</a></h3>
+                    <p class="duration">November 2024 - Present</p>
+                    <ul>
+                        <li>Designed and led interactive workshops on machine learning, deep learning, and NLP, enabling students to build real-world models using Python, Scikit-learn, and PyTorch.</li>
+                        <li>Mentored students in building real-world AI projects, helping them understand the full pipeline from data preprocessing to model training, evaluation, and deployment.</li>
+                        <li>Designed modular, reproducible learning workflows using tools such as Ollama, llama3, and embedding models to teach Retrieval-Augmented Generation (RAG) systems and vector database integration.</li>
+                    </ul>
                 </div>
-                <div class="col">
-                  <div class="card h-100">
-                    <img
-                      src="Assets/Images/experience.png"
-                      class="card-img-top"
-                      style="
-                        width: 50px;
-                        height: auto;
-                        align-self: center;
-                        padding-top: 15px;
-                      "
-                      alt="experience"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Experience</h5>
-                      <p class="card-text">2+ years<br />Web Development</p>
-                    </div>
-                  </div>
+                <div class="experience-item">
+                    <h3>Teaching Assistant (TA) - <a class="experience_link" href="https://mmamc.tu.edu.np/" target="_blank">Mahendra Morang Adarsh Multiple Campus, Tribhuvan University, Nepal</a></h3>
+                    <p class="duration">December 2024 - Present</p>
+                    <ul>
+                        <li>I teach Numerical Methods, focusing on algorithmic approaches to solving mathematical and computational problems.</li>
+                        <li>I teach Net Centric Computing, covering internet technologies, network protocols, and distributed systems.
+</li>
+                        <li>I teach Advanced Java Programming, guiding students through object-oriented design, multithreading, and enterprise-level application development.
+</li>
+                    </ul>
                 </div>
-                <div class="col">
-                  <div class="card h-100">
-                    <img
-                      src="Assets/Images/project.png"
-                      class="card-img-top"
-                      style="
-                        width: 50px;
-                        height: auto;
-                        align-self: center;
-                        padding-top: 15px;
-                      "
-                      alt="experience"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Projects</h5>
-                      <p class="card-text">5+</p>
-                      <a href="#" class="btn btn-success">View</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card h-100">
-                    <img
-                      src="Assets/Images/blog.png"
-                      class="card-img-top"
-                      style="
-                        width: 50px;
-                        height: auto;
-                        align-self: center;
-                        padding-top: 15px;
-                      "
-                      alt="experience"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Blogs and Videos</h5>
-                      <p class="card-text">7+ blogs and 20+ videos</p>
-                      <a href="#" class="btn btn-success">View</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- End About Section -->
-      <!-- Certificate Section -->
-      <section id="certificate">
-        <div class="container certificate-container text-center mt-4 mb-4">
-          <h1 class="">Certificates</h1>
-          <div class="row mt-4">
-            <div id="certificatecarousel" class="carousel slide">
-              <div class="carousel-inner mb-4">
-                <div class="carousel-item active">
-                  <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://skills.yourlearning.ibm.com/certificate/share/7e71d2c648ewogICJsZWFybmVyQ05VTSIgOiAiMTU4NDQ1NFJFRyIsCiAgIm9iamVjdFR5cGUiIDogIkFDVElWSVRZIiwKICAib2JqZWN0SWQiIDogIlBMQU4tQkMwRkFFRThFNDM5Igp9eff8b4eebd-10"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="Assets/Certificates/IBM/DataFundamentals.png"
-                            class="card-img-top"
-                            alt="Data Fundamentals"
-                          />
-                        </a>
-
-                        <div class="card-body">
-                          <h5 class="card-title">Data Fundamentals</h5>
-                          <p class="card-text">
-                            By:
-                            <a
-                              href="https://skillsbuild.org/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              >IBM SkillsBuild</a
-                            >
-                          </p>
-                          <a
-                            href="https://skills.yourlearning.ibm.com/certificate/share/7e71d2c648ewogICJsZWFybmVyQ05VTSIgOiAiMTU4NDQ1NFJFRyIsCiAgIm9iamVjdFR5cGUiIDogIkFDVElWSVRZIiwKICAib2JqZWN0SWQiIDogIlBMQU4tQkMwRkFFRThFNDM5Igp9eff8b4eebd-10"
-                            class="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >Verify</a
-                          >
+        </section>
+        
+        <!-- Certificates Section (Horizontal Carousel with Buttons) -->
+        <section id="certificates" class="section">
+            <div class="container">
+                <h2>Certificates</h2>
+                <div class="carousel-wrapper"> <!-- New wrapper for positioning buttons -->
+                    <button class="carousel-nav-btn prev-btn" onclick="scrollCarousel(this, -1)">&#10094;</button> <!-- Left arrow -->
+                    <div class="carousel-container" id="certificates-carousel"> <!-- Added ID -->
+                        <div class="certificate-item">
+                            <h3>Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</h3>
+                            <p>Issued by: Oracle</p>
+                            <p>Date: September 2025</p>
+                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=7145BAE4EBE7384C1DAFF3919B0031F54FCA33D10B4F2B50793BB164F8852853" target="_blank">View Credential</a>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://www.datacamp.com/statement-of-accomplishment/course/93d1f494abe512640f37228e4b2ddc9b7c3f5b81?raw=1"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="Assets/Certificates/datacamp/understandingdatascience.png"
-                            class="card-img-top"
-                            alt="Understanding Data Science"
-                          />
-                        </a>
-
-                        <div class="card-body">
-                          <h5 class="card-title">Understanding Data Science</h5>
-                          <p class="card-text">
-                            By:
-                            <a
-                              href="https://app.datacamp.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              >datacamp</a
-                            >
-                          </p>
-                          <a
-                            href="https://www.datacamp.com/completed/statement-of-accomplishment/course/93d1f494abe512640f37228e4b2ddc9b7c3f5b81"
-                            class="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >Verify</a
-                          >
+                        <div class="certificate-item">
+                            <h3>Oracle AI Vector Search Certified Professional</h3>
+                            <p>Issued by: Oracle</p>
+                            <p>Date: September 2025</p>
+                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=284A1746EC1233F845281E0BFECCC4FEA2D2A004056232F68A9B2CE82A214CFC" target="_blank">View Credential</a>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://skillshop.credential.net/45d273cd-1331-4c01-bdaa-3610f958c96b"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="Assets/Certificates/google/googleAnalytics.png"
-                            class="card-img-top"
-                            alt="Google Analytics"
-                          />
-                        </a>
-
-                        <div class="card-body">
-                          <h5 class="card-title">
-                            <hr />
-                            Google Analytics Certified
-                          </h5>
-                          <p class="card-text">
-                            By:
-                            <a
-                              href="https://skillshop.docebosaas.com/pages/16/skillshop-home-page"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              >Google Skillshop</a
-                            >
-                          </p>
-                          <a
-                            href="https://skillshop.credential.net/45d273cd-1331-4c01-bdaa-3610f958c96b"
-                            class="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >Verify</a
-                          >
+                        <div class="certificate-item">
+                            <h3>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
+                            <p>Issued by: Oracle</p>
+                            <p>Date: July 2025</p>
+                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=2E976933F56753F1101E41EBBBC23F1E2B155AEAB852A1208E2AD3926FF1E693" target="_blank">View Credential</a>
                         </div>
-                      </div>
+                        <div class="certificate-item">
+                            <h3>Data Fundamentals</h3>
+                            <p>Issued by: IBM</p>
+                            <p>Date: November 2023</p>
+                            <a href="https://www.credly.com/badges/e1341601-7748-4857-9c5f-5ff4ffa829e8/linked_in_profile" target="_blank">View Credential</a>
+                        </div>
+                        <div class="certificate-item">
+                            <h3>Java Programming I</h3>
+                            <p>Issued by: University of Helsinki</p>
+                            <p>Date: June 2023</p>
+                            <a href="https://certificates.mooc.fi/validate/98irhyy6hjk" target="_blank">View Credential</a>
+                        </div>
+                        <div class="certificate-item">
+                            <h3>Foundational C# with Microsoft</h3>
+                            <p>Issued by: Microsoft (freeCodeCamp)</p>
+                            <p>Date: November 2023</p>
+                            <a href="https://www.freecodecamp.org/certification/fcc870e2987-df3f-4b95-83ca-63d5de762ef0/foundational-c-sharp-with-microsoft" target="_blank">View Credential</a>
+                        </div>
+                        <div class="certificate-item">
+                            <h3>Responsive Web Design</h3>
+                            <p>Issued by: freeCodeCamp</p>
+                            <p>Date: December 2022</p>
+                            <a href="https://www.freecodecamp.org/certification/fcc870e2987-df3f-4b95-83ca-63d5de762ef0/responsive-web-design" target="_blank">View Credential</a>
+                        </div>
+                        <div class="certificate-item">
+                            <h3>AI For Everyone</h3>
+                            <p>Issued by: DeepLearning.AI (Coursera)</p>
+                            <p>Date: February 2022</p>
+                            <a href="https://www.coursera.org/account/accomplishments/records/RBQVZ44QWJMP" target="_blank">View Credential</a>
+                        </div>
                     </div>
-                  </div>
+                    <button class="carousel-nav-btn next-btn" onclick="scrollCarousel(this, 1)">&#10095;</button> <!-- Right arrow -->
                 </div>
-                <div class="carousel-item">
-                  <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://coursera.org/share/c27e6c5e17f7197d314a3fb5f4af61fe"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="Assets/Certificates/coursera/AI For Everyone-1.png"
-                            class="card-img-top"
-                            alt="AI For Everyone"
-                          />
-                        </a>
-                        <div class="card-body">
-                          <h5 class="card-title">AI For Everyone</h5>
-                          <p class="card-text">
-                            By:
-                            <a
-                              href="https://www.coursera.org/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              >DeepLearning.AI and Coursera</a
-                            >
-                          </p>
-                          <a
-                            href="https://coursera.org/share/c27e6c5e17f7197d314a3fb5f4af61fe"
-                            class="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >Verify</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://www.kaggle.com/learn/certification/sujankarna/data-cleaning"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="Assets/Certificates/kaggle/Sujan Karna - Data Cleaning.png"
-                            class="card-img-top"
-                            alt="Data Cleaning"
-                          />
-                        </a>
-                        <div class="card-body">
-                          <h5 class="card-title">Data Cleaning</h5>
-                          <p class="card-text">
-                            By:
-                            <a
-                              href="https://www.kaggle.org/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              >Kaggle</a
-                            >
-                          </p>
-                          <a
-                            href="https://www.kaggle.com/learn/certification/sujankarna/data-cleaning"
-                            class="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >Verify</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://www.freecodecamp.org/certification/fcc870e2987-df3f-4b95-83ca-63d5de762ef0/responsive-web-design"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="Assets/Certificates/freecodecamp/responsiveWebDesign.png"
-                            class="card-img-top"
-                            alt="Responsive Web Design"
-                          />
-                        </a>
-                        <div class="card-body">
-                          <h5 class="card-title">Responsive Web Design</h5>
-                          <p class="card-text">
-                            By:
-                            <a
-                              href="https://www.freecodecamp.org/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              >freecodecamp</a
-                            >
-                          </p>
-                          <a
-                            href="https://www.freecodecamp.org/certification/fcc870e2987-df3f-4b95-83ca-63d5de762ef0/responsive-web-design"
-                            class="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >Verify</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://certificates.mooc.fi/validate/98irhyy6hjk"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="Assets/Certificates/certificate-java-programming-i.png"
-                            class="card-img-top"
-                            alt="Java Programming-I"
-                          />
-                        </a>
-
-                        <div class="card-body">
-                          <h5 class="card-title">Java Programming</h5>
-                          <p class="card-text">
-                            By:
-                            <a
-                              href="https://java-programming.mooc.fi/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              >University of Helsinki</a
-                            >
-                          </p>
-                          <a
-                            href="https://certificates.mooc.fi/validate/98irhyy6hjk"
-                            class="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >Verify</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://www.kaggle.com/learn/certification/sujankarna/data-visualization"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="Assets/Certificates/kaggle/Sujan Karna - Data Visualization.png"
-                            class="card-img-top"
-                            alt="Data Visualization"
-                          />
-                        </a>
-
-                        <div class="card-body">
-                          <h5 class="card-title">Data Visualization</h5>
-                          <p class="card-text">
-                            By:
-                            <a
-                              href="https://www.kaggle.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              >kaggle</a
-                            >
-                          </p>
-                          <a
-                            href="https://www.kaggle.com/learn/certification/sujankarna/data-visualization"
-                            class="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >Verify</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://www.freecodecamp.org/certification/fcc870e2987-df3f-4b95-83ca-63d5de762ef0/foundational-c-sharp-with-microsoft"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="Assets/Certificates/freecodecamp/csharp.png"
-                            class="card-img-top"
-                            alt="C#"
-                          />
-                        </a>
-
-                        <div class="card-body">
-                          <h5 class="card-title">
-                            <hr />
-                            Foundational C# with Microsoft
-                          </h5>
-                          <p class="card-text">
-                            By:
-                            <a
-                              href="https://freecodecamp.com"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              >freecodecamp</a
-                            >
-                          </p>
-                          <a
-                            href="https://www.freecodecamp.org/certification/fcc870e2987-df3f-4b95-83ca-63d5de762ef0/foundational-c-sharp-with-microsoft"
-                            class="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >Verify</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#certificatecarousel"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#certificatecarousel"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Certificate Section -->
-      <!-- Blog Section -->
-      <section id="blog">
-        <div class="container blog-container text-center mt-4 mb-4">
-          <h1 class="">Blogs</h1>
-          <div class="row mt-4">
-            <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://medium.com/@karna.sujan52/building-decision-tree-using-iterative-dichotomiser-3-id3-algorithms-3a42345b87d6"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*YNgfV3yc1vEQ4fpzIO7NSg.png"
-                            class="card-img-top"
-                            alt="Data Fundamentals"
-                          />
-                        </a>
+        </section>
 
-                        <div class="card-body">
-                          <a
-                            href="https://medium.com/@karna.sujan52/building-decision-tree-using-iterative-dichotomiser-3-id3-algorithms-3a42345b87d6"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <h5 class="card-title">
-                              Building Decision Tree Using Iterative
-                              Dichotomiser 3 (ID3) Algorithms
-                            </h5>
-                          </a>
+        <!-- Projects Section (Horizontal Carousel) -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="carousel-wrapper">
+                    <button class="carousel-nav-btn prev-btn" onclick="scrollCarousel(this, -1)">&#10094;</button> <!-- Left arrow -->
+                    <div class="carousel-container" id="projects-carousel">
+                    <div class="project-item">
+                        <h3>NLP Web App</h3>
+                        <p>Developed a Natural Language Processing web application capable of Text Analysis, Translation, and Sentiment Analysis.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/SujanKarna/NLP_web_app?tab=readme-ov-file" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://nlpwebappbysujankarna.streamlit.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
-                      </div>
                     </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://medium.com/@karna.sujan52/eigen-values-eigen-vectors-calculation-536e2ceb27d9"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*dgc3LlL7zz7dadY_-aAOwg.png"
-                            class="card-img-top"
-                            alt="Understanding Data Science"
-                          />
-                        </a>
-                        <div class="card-body">
-                          <a
-                            href="https://medium.com/@karna.sujan52/eigen-values-eigen-vectors-calculation-536e2ceb27d9"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <h5 class="card-title">
-                              How to calculate Eigen Values & Eigen Vectors?
-                            </h5>
-                          </a>
+                    <div class="project-item">
+                        <h3>Iris Flower Classifier</h3>
+                        <p>An interactive machine learning web application that predicts the species of an iris flower based on user-inputted measurements.Built to demonstrate practical ML deployment and intuitive user experience.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/SujanKarna/IrisWeb" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://sujaniris.streamlit.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
-                      </div>
                     </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://medium.com/@karna.sujan52/frequent-pattern-mining-fp-growth-numerical-bfcc6c7cd1f5"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="https://miro.medium.com/v2/resize:fit:828/format:webp/0*d9zrut3g5GxulUTX"
-                            class="card-img-top"
-                            alt="Google Analytics"
-                          />
-                        </a>
-
-                        <div class="card-body">
-                          <a
-                            href="https://medium.com/@karna.sujan52/frequent-pattern-mining-fp-growth-numerical-bfcc6c7cd1f5"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <h5 class="card-title">
-                              How to solve Frequent Pattern Mining-FP Growth
-                              Numerical?
-                            </h5>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    
+                    <!-- Add more project items -->
+                    <button class="carousel-nav-btn next-btn" onclick="scrollCarousel(this, 1)">&#10095;</button> <!-- Right arrow -->
                 </div>
-                <div class="carousel-item">
-                  <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://medium.com/@karna.sujan52/naive-bayesian-classification-numerical-solved-a2b4e716c395"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="https://miro.medium.com/v2/resize:fit:640/format:webp/0*P2KVLZAIz2ea9gne"
-                            class="card-img-top"
-                            alt="Data Fundamentals"
-                          />
-                        </a>
-
-                        <div class="card-body">
-                          <a
-                            href="https://medium.com/@karna.sujan52/naive-bayesian-classification-numerical-solved-a2b4e716c395"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <h5 class="card-title">
-                              How to solve Naive Bayesian Classification
-                              -Numerical?
-                            </h5>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://medium.com/@karna.sujan52/back-propagation-algorithm-numerical-solved-f60c6986b643"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="https://miro.medium.com/v2/resize:fit:828/format:webp/0*jSHGWI0p3pqiDjCV"
-                            class="card-img-top"
-                            alt="Understanding Data Science"
-                          />
-                        </a>
-                        <div class="card-body">
-                          <a
-                            href="https://medium.com/@karna.sujan52/back-propagation-algorithm-numerical-solved-f60c6986b643"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <h5 class="card-title">
-                              Back Propagation Algorithm - Numerical Solved
-                            </h5>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://medium.com/@karna.sujan52/density-based-dbscan-numerical-f4e00b9cce68"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*yIObri7WbS_RbaAumtUK7w.jpeg"
-                            class="card-img-top"
-                            alt="Google Analytics"
-                          />
-                        </a>
-
-                        <div class="card-body">
-                          <a
-                            href="https://medium.com/@karna.sujan52/density-based-dbscan-numerical-f4e00b9cce68"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <h5 class="card-title">
-                              Density Based- DBSCAN Numerical
-                            </h5>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://medium.com/@karna.sujan52/k-means-algorithm-solved-numerical-3c94d25076e8"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*wmtAic6azak-b1ZOJJoTTw.png"
-                            class="card-img-top"
-                            alt="Data Fundamentals"
-                          />
-                        </a>
-
-                        <div class="card-body">
-                          <a
-                            href="https://medium.com/@karna.sujan52/k-means-algorithm-solved-numerical-3c94d25076e8"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <h5 class="card-title">
-                              How to solve K-Means Algorithm Numerical?
-                            </h5>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <a
-                          href="https://medium.com/@karna.sujan52/numerical-of-agglomerative-hierarchical-clustering-agenes-c946b1a1e2e3"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*N-yBz-owuhljihTc43r_8A.png"
-                            class="card-img-top"
-                            alt="Understanding Data Science"
-                          />
-                        </a>
-                        <div class="card-body">
-                          <a
-                            href="https://medium.com/@karna.sujan52/numerical-of-agglomerative-hierarchical-clustering-agenes-c946b1a1e2e3"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <h5 class="card-title">
-                              AGENES Agglomerative Hierarchical Clustering
-                              Numerical Solved
-                            </h5>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExample"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExample"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+                
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Blog Section -->
-      <!-- Video Section -->
-      <section id="video">
-        <div class="container video-container text-center mt-4 mb-4">
-          <h1 class="">Videos</h1>
-          <div class="row mt-4">
-            <div id="videocarousel" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <iframe
-                      height="250"
-                      src="https://www.youtube.com/embed/EssATNAIoYk?si=HyYoYVk_54JXAZPV"
-                    >
-                    </iframe>
+        </section>
 
-                    <iframe
-                      height="250"
-                      src="https://www.youtube.com/embed/tqQYfeu-ang?si=w1lA9mUAMl1cdW9h"
-                    >
-                    </iframe>
-
-                    <iframe
-                      height="250"
-                      src="https://www.youtube.com/embed/DdHnXHOEW20?si=H-rcVEm_UVCS-RW2"
-                    >
-                    </iframe>
-                  </div>
+        <!-- Blog Section (from Medium)  -->
+        <section id="blog" class="section">
+            <div class="container">
+                <h2>My Blog Posts (from Medium)</h2>
+                <div id="medium-posts" class="carousel-container">
+                    <div class="blog-post-item">
+                        <h3>Understanding Gradient Descent: The Backbone of Machine Learning Optimization (With Visual Examples)</h3>
+                        <p>A deep dive into the optimization algorithm that powers many machine learning models.</p>
+                        <div class="blog-links">
+                            <a href="https://medium.com/@karna.sujan52/understanding-gradient-descent-the-backbone-of-machine-learning-optimization-with-visual-ee8eda9d59f4" target="_blank" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-post-item">
+                        <h3>How to solve K-Means Algorithm Numerical?</h3>
+                        <p>This blog breaks down the step-by-step process of solving numerical problems using the K-Means clustering algorithm. </p>
+                        <div class="blog-links">
+                            <a href="https://medium.com/@karna.sujan52/k-means-algorithm-solved-numerical-3c94d25076e8" target="_blank" class="btn">Read More</a>
+                        </div>
+                    </div>
+                     <div class="blog-post-item">
+                        <h3>Building Decision Tree Using Iterative Dichotomiser 3 (ID3) Algorithms</h3>
+                        <p>This blog post walks through the process of constructing a decision tree using the ID3 algorithm.</p>
+                         <div class="blog-links">
+                            <a href="https://medium.com/@karna.sujan52/building-decision-tree-using-iterative-dichotomiser-3-id3-algorithms-3a42345b87d6" target="_blank" class="btn">Read More</a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#videocarousel"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#videocarousel"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+                <a href="https://medium.com/@karna.sujan52" target="_blank" class="btn">View all on Medium</a>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Blog Section -->
+        </section>
+
+        <!-- YouTube Section -->
+        <section id="youtube" class="section">
+            <div class="container">
+                <h2>My YouTube Videos</h2>
+                <div class="carousel-container">
+                    <div class="youtube-video-item">
+                        <iframe src="https://www.youtube.com/embed/EssATNAIoYk?si=r-VEGWkT4kyO_jBz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>Introduction to Net Centric Computing</h3>
+                        <p></p>
+                    </div>
+                    <div class="youtube-video-item">
+                        <iframe src="https://www.youtube.com/embed/dDkC_W-S304" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>Creating ASP.NET core MVC applications</h3>
+                        <p></p>
+                    </div>
+                     <div class="youtube-video-item">
+                        <iframe src="https://www.youtube.com/embed/778PAC2UpV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>Cosine Similarity</h3>
+                        <p></p>
+                    </div>
+                    <div class="youtube-video-item">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>My Journey into AI/ML: Tips for CSIT Graduates</h3>
+                        <p>Sharing my experience and advice for new graduates looking to enter the AI/ML field.</p>
+                    </div>
+                    <!-- Add more YouTube video embeds -->
+                </div>
+                <a href="https://www.youtube.com/@AlxiCoders" target="_blank" class="btn">View all on YouTube</a>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                    <p id="form-status"></p>
+                </form>
+            </div>
+        </section>
     </main>
-    <footer></footer>
-    <script>
-      const dynamicText = document.getElementById("dynamic-text");
-      const texts = ["Web Developer />", "Data Science Enthusiast />"];
-      let index = 0;
 
-      function sleep(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-      }
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Sujan Karna. All rights reserved.</p>
+        </div>
+    </footer>
 
-      async function deleteText(text) {
-        for (let i = text.length; i > 0; i--) {
-          dynamicText.textContent = text.substring(0, i);
-          await sleep(50);
-        }
-      }
-
-      async function typeText(text) {
-        for (let i = 0; i < text.length; i++) {
-          dynamicText.textContent = text.substring(0, i + 1);
-          await sleep(50);
-        }
-      }
-
-      async function changeText() {
-        await deleteText(texts[index]);
-        index = (index + 1) % texts.length;
-        await typeText(texts[index]);
-        setTimeout(changeText, 2000);
-      }
-
-      changeText();
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>

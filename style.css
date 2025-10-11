@@ -1,0 +1,781 @@
+/* Variables for colors - making it easy to switch themes */
+:root {
+    /* Dark Theme */
+    --primary-bg: #1a1a2e; /* Deep blue/purple */
+    --secondary-bg: #16213e; /* Slightly lighter */
+    --card-bg: #0f3460;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --accent-color: #e94560; /* A vibrant red/pink */
+    --link-color: #b0e0e6; /* Light blue */
+    --border-color: #3e4d6d;
+    --input-bg: #2b3b5c;
+    --input-border: #4a5a7d;
+}
+
+/* Light Theme Variables - will be applied when 'light-theme' class is active */
+body.light-theme {
+    --primary-bg: #f4f7f6; /* Light grey/off-white */
+    --secondary-bg: #ffffff;
+    --card-bg: #e0e6ec;
+    --text-color: #333333;
+    --heading-color: #222222;
+    --accent-color: #007bff; /* A standard blue */
+    --link-color: #0056b3;
+    --border-color: #d1d9e6;
+    --input-bg: #ffffff;
+    --input-border: #cccccc;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--secondary-bg);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+
+/* Theme Switch Toggle */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--card-bg); /* Darker background for the switch itself */
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--accent-color); /* Accent color when checked */
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--accent-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.theme-switch-wrapper span {
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+    padding: 100px 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+}
+
+.hero-text .animated-text {
+    font-weight: 600;
+    color: var(--accent-color);
+    min-height: 1.5em; /* Ensure space for the animation */
+    display: inline-block;
+}
+
+.hero-image img {
+    max-width: 300px;
+    border-radius: 50%;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: zoomIn 1s ease-out;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--link-color);
+    font-size: 1.8em;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+/* General Section Styling */
+.section {
+    padding: 80px 0;
+    background-color: var(--secondary-bg);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section:nth-of-type(even) {
+    background-color: var(--card-bg); /* Alternate background for sections */
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Education & Experience Items */
+.education-item, .experience-item {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover, .experience-item:hover, .project-item:hover, .certificate-item:hover {
+    transform: translateY(-5px);
+}
+
+.education-item h3, .experience-item h3 {
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.duration {
+    color: var(--link-color);
+    font-style: italic;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.education-item ul, .experience-item ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--text-color);
+}
+
+/* Grids for Certificates, Projects, Blogs, YouTube */
+.certificate-grid, .project-grid, .blog-grid, .youtube-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.certificate-item, .project-item, .blog-post-item, .youtube-video-item {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.project-item h3, .certificate-item h3, .blog-post-item h3, .youtube-video-item h3 {
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.project-item p, .certificate-item p, .blog-post-item p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allow content to grow */
+}
+
+.project-links a, .certificate-item a {
+    color: var(--link-color);
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover, .certificate-item a:hover {
+    color: var(--accent-color);
+}
+
+.youtube-video-item iframe {
+    width: 100%;
+    aspect-ratio: 16/9; /* Maintain aspect ratio */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+/* Experience_links */
+.experience_link {
+    
+    color: var(--text-color);
+}
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: darken(var(--accent-color), 10%); /* Adjust based on your accent color */
+    transform: translateY(-2px);
+}
+
+/* Contact Form */
+#contact-form {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--heading-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(var(--accent-color-rgb), 0.3); /* Assuming you define accent-color-rgb */
+}
+
+#form-status {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none; /* Hide for mobile, you'd implement a hamburger menu */
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .theme-switch-wrapper {
+        margin-top: 10px;
+    }
+
+    .certificate-grid, .project-grid, .blog-grid, .youtube-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ... (previous CSS code) ... */
+
+/* General Section Styling */
+.section {
+    padding: 80px 0;
+    background-color: var(--secondary-bg);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section:nth-of-type(even) {
+    background-color: var(--card-bg); /* Alternate background for sections */
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Education & Experience Items (these remain vertical for better readability) */
+.education-item, .experience-item {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover, .experience-item:hover {
+    transform: translateY(-5px);
+}
+
+.education-item h3, .experience-item h3 {
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.duration {
+    color: var(--link-color);
+    font-style: italic;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.education-item ul, .experience-item ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--text-color);
+}
+
+/* --- Horizontal Carousel/Grid Styling --- */
+.carousel-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 30px; /* Space between cards */
+    padding-bottom: 20px; /* Space for scrollbar */
+    margin-top: 30px;
+    /* Hide scrollbar for WebKit browsers */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Custom Scrollbar for other browsers if desired (optional) */
+/* .carousel-container::-webkit-scrollbar {
+    height: 8px;
+}
+.carousel-container::-webkit-scrollbar-track {
+    background: var(--secondary-bg);
+    border-radius: 10px;
+}
+.carousel-container::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+}
+.carousel-container::-webkit-scrollbar-thumb:hover {
+    background: darken(var(--accent-color), 10%);
+} */
+
+
+.certificate-item, .project-item, .blog-post-item, .youtube-video-item {
+    flex: 0 0 320px; /* Prevent cards from shrinking, give a fixed width */
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Indicate it's interactive/clickable */
+}
+
+.certificate-item:hover, .project-item:hover, .blog-post-item:hover, .youtube-video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-item h3, .certificate-item h3, .blog-post-item h3, .youtube-video-item h3 {
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.project-item p, .certificate-item p, .blog-post-item p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allow content to grow */
+    color: var(--text-color);
+}
+
+.project-links, .certificate-links, .blog-links {
+    margin-top: auto; /* Push links to the bottom */
+    display: flex;
+    flex-wrap: wrap; /* Allow links to wrap if many */
+    gap: 10px;
+}
+
+.project-links a, .certificate-item a, .blog-post-item a.btn {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Keep links from breaking oddly */
+}
+
+.project-links a:hover, .certificate-item a:hover, .blog-post-item a.btn:hover {
+    color: var(--accent-color);
+}
+
+.youtube-video-item iframe {
+    width: 100%;
+    aspect-ratio: 16/9; /* Maintain aspect ratio */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Ensure the `Read More` button looks good inside blog posts */
+.blog-post-item a.btn {
+    margin-top: 15px;
+    align-self: flex-start; /* Align button to start if card is flex-column */
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+
+/* ... (rest of the CSS code, Contact Form, Footer, Animations, Responsive Design) ... */
+
+/* Adjust responsive design for carousels */
+@media (max-width: 768px) {
+    /* ... (previous responsive styles) ... */
+
+    .certificate-item, .project-item, .blog-post-item, .youtube-video-item {
+        flex: 0 0 90%; /* On smaller screens, make cards wider but still scrollable */
+        margin-right: 15px; /* Adjust spacing */
+    }
+
+    .carousel-container {
+        padding-left: 20px; /* Add some padding so the first card isn't against the edge */
+        padding-right: 20px;
+    }
+}
+
+
+/* --- Horizontal Carousel/Grid Styling --- */
+
+/* New wrapper for buttons */
+.carousel-wrapper {
+    position: relative; /* Crucial for positioning nav buttons */
+    margin-top: 30px;
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding-bottom: 20px;
+    /* Hide scrollbar for WebKit browsers */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the button */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above carousel items */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    line-height: 1; /* Adjust line height for better arrow centering */
+}
+
+.carousel-nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-nav-btn.prev-btn {
+    left: 0px; /* Position on the left edge of the wrapper */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.carousel-nav-btn.next-btn {
+    right: 0px; /* Position on the right edge of the wrapper */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Ensure buttons are visible over content in light theme */
+body.light-theme .carousel-nav-btn {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+body.light-theme .carousel-nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.certificate-item, .project-item, .blog-post-item, .youtube-video-item {
+    flex: 0 0 320px;
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* ... (rest of the CSS code) ... */
+
+/* Adjust responsive design for carousels and buttons */
+@media (max-width: 768px) {
+    /* ... (previous responsive styles) ... */
+
+    .carousel-item {
+        flex: 0 0 90%;
+        margin-right: 15px;
+    }
+
+    .carousel-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        scroll-snap-type: x mandatory; /* Optional: for snapping effect on mobile */
+    }
+    .carousel-item {
+        scroll-snap-align: start; /* Optional: for snapping effect on mobile */
+    }
+
+    /* Hide buttons on very small screens if they obstruct content */
+    .carousel-nav-btn {
+        padding: 5px 10px;
+        font-size: 1.2em;
+        /* You might consider hiding them completely on very small screens or repositioning */
+        /* display: none; */
+    }
+}
