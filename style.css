@@ -207,8 +207,10 @@ input:checked + .slider:before {
 }
 
 .hero-image img {
-    max-width: 300px;
-    border-radius: 50%;
+    width: 300px;          /* fixed width */
+    height: 300px;         /* make height equal → perfect circle */
+    object-fit: cover;     /* crop instead of stretching */
+    border-radius: 50%;    /* circular frame */
     border: 5px solid var(--accent-color);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     animation: zoomIn 1s ease-out;
